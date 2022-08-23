@@ -1,4 +1,4 @@
-﻿using SolidPractice;
+﻿using SolidPractice.SRP;
 
 namespace TestSolidPractice;
 
@@ -19,13 +19,6 @@ public class TestRectangle
     rectangle.Draw(2,3); 
         Assert.AreEqual(2, rectangle.Width);
         Assert.AreEqual(3, rectangle.Height);
-    }
-
-    [Test]
-    public void TestArea()
-    {
-        rectangle.Draw(2, 3);
-        Assert.AreEqual(6, rectangle.Area());
     }
 
     [Test]

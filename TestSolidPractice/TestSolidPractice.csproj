@@ -19,4 +19,10 @@
   <ItemGroup>
     <ProjectReference Include="..\SolidPractice\SolidPractice.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="SRP\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="SRP\" />
+  </ItemGroup>
 </Project>

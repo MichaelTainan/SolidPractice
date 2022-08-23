@@ -1,4 +1,4 @@
-﻿namespace SolidPractice;
+﻿namespace SolidPractice.SRP;
 public class Rectangle
 {
     private int width;
@@ -22,11 +22,6 @@ public class Rectangle
     {
         this.width = width;
         this.height = height;
-    }
-
-    public int Area()
-    {
-        return width * height;
     }
 }
 
