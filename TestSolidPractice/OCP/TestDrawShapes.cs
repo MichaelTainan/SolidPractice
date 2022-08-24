@@ -24,7 +24,7 @@ public class TestDrawShapes
         circle = new Circle();
         shapes.Add(square);
         shapes.Add(circle);
-        drawShapes.DrawAllShapes((IList)shapes);
+        drawShapes.DrawAllShapes(shapes);
 
         Assert.AreEqual("This is a Square!", shapes[0].GetShapeDraw());
     }      
