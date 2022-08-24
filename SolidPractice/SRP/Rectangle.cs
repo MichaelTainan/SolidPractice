@@ -13,15 +13,5 @@ public class Rectangle
         get { return height; }
         set { this.height = value; }
     }
-
-    public Rectangle()
-    {
-    }
-
-    public void Draw(int width, int height)
-    {
-        this.width = width;
-        this.height = height;
-    }
 }
 

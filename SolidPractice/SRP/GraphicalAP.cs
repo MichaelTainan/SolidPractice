@@ -3,25 +3,25 @@ namespace SolidPractice.SRP;
 
 public class GraphicalAP
 {
-    private Rectangle rectangle;
+    private GraphicalRectangle graphicalRectangle;
     public GraphicalAP()
     {
-        rectangle = new Rectangle();
+        graphicalRectangle = new GraphicalRectangle();
     }
 
     public double GetRectangleHeight()
     {
-        return rectangle.Height;
+        return graphicalRectangle.Height;
     }
 
     public double GetRectangleWidth()
     {
-        return rectangle.Width;
+        return graphicalRectangle.Width;
     }
 
     public void RectangleDraw(int width, int height)
     {
-        rectangle.Draw(width, height);
+        graphicalRectangle.Draw(width, height);
     }
 }
 

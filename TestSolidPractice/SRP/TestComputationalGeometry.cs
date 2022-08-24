@@ -22,9 +22,7 @@ namespace TestSolidPractice
         {
             
             computationalGeometry.setRectangleWidth(5);
-            //Console.WriteLine("Width=" + computationalGeometry.getRectangleWidth());
             computationalGeometry.setRectangleHeight(2);
-            //Console.WriteLine("Height=" + computationalGeometry.getRectangleHeight());
             Assert.AreEqual(10, computationalGeometry.GetRectangleArea());
         }
     }
