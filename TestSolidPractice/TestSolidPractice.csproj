@@ -21,8 +21,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="SRP\" />
+    <None Remove="OCP\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SRP\" />
+    <Folder Include="OCP\" />
   </ItemGroup>
 </Project>
