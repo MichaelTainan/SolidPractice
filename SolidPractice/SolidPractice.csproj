@@ -9,9 +9,11 @@
   <ItemGroup>
     <None Remove="SRP\" />
     <None Remove="OCP\" />
+    <None Remove="LSP\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SRP\" />
     <Folder Include="OCP\" />
+    <Folder Include="LSP\" />
   </ItemGroup>
 </Project>
