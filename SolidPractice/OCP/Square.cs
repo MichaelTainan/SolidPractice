@@ -19,9 +19,3 @@ public class Square:Shape
         return drawcomment;
     }
 }
-
-public interface Shape
-{
-    void Draw();
-    string GetShapeDraw();
-}

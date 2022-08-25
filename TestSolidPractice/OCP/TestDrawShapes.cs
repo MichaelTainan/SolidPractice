@@ -11,6 +11,7 @@ public class TestDrawShapes
     private Shape square;
     private Shape circle;
     private IList<Shape> shapes;
+    private ArrayList arrayShapes;
     public TestDrawShapes()
     {
     }
@@ -20,6 +21,7 @@ public class TestDrawShapes
     {
         drawShapes = new DrawShapes();
         shapes = new List<Shape>();
+        //shapes = new ArrayList();
         square = new Square();
         circle = new Circle();
         shapes.Add(square);
@@ -28,5 +30,20 @@ public class TestDrawShapes
 
         Assert.AreEqual("This is a Square!", shapes[0].GetShapeDraw());
         Assert.AreEqual("This is a Circle!", shapes[1].GetShapeDraw());
-    }      
+    }
+
+    [Test]
+    public void TestDrawAllArrayShapes()
+    {
+        drawShapes = new DrawShapes();
+        arrayShapes = new ArrayList();
+        square = new Square();
+        circle = new Circle();
+        arrayShapes.Add(square);
+        arrayShapes.Add(circle);
+        drawShapes.DrawAllShapes(arrayShapes);
+
+        Assert.AreEqual(typeof(Circle), arrayShapes[0].GetType());
+        Assert.AreEqual(typeof(Square), arrayShapes[1].GetType());
+    }
 }
