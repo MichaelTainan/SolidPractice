@@ -1,30 +1,29 @@
 ﻿using System;
 using SolidPractice.SRP;
 
-namespace TestSolidPractice
+namespace TestSolidPractice.SRP;
+
+[TestFixture]
+public class TestComputationalGeometry
 {
-    [TestFixture]
-    public class TestComputationalGeometry
+    private ComputationalGeometry computationalGeometry;
+    public TestComputationalGeometry()
     {
-        private ComputationalGeometry computationalGeometry;
-        public TestComputationalGeometry()
-        {
-        }
+    }
 
-        [SetUp]
-        public void Setup()
-        {
-            computationalGeometry = new ComputationalGeometry();
-        }
+    [SetUp]
+    public void Setup()
+    {
+        computationalGeometry = new ComputationalGeometry();
+    }
 
-        [Test]
-        public void TestDraw()
-        {
-            
-            computationalGeometry.setRectangleWidth(5);
-            computationalGeometry.setRectangleHeight(2);
-            Assert.AreEqual(10, computationalGeometry.GetRectangleArea());
-        }
+    [Test]
+    public void TestDraw()
+    {
+        
+        computationalGeometry.setRectangleWidth(5);
+        computationalGeometry.setRectangleHeight(2);
+        Assert.AreEqual(10, computationalGeometry.GetRectangleArea());
     }
 }
 

@@ -1,6 +1,6 @@
 ﻿using SolidPractice.SRP;
 
-namespace TestSolidPractice;
+namespace TestSolidPractice.SRP;
 
 [TestFixture]
 public class TestGraphicalAP
