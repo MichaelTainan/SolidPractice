@@ -1,6 +1,6 @@
 ﻿namespace SolidPractice.DIP
 {
-    public interface ButtonServer
+    public interface SwitchableDevice
     {
         public bool status();
         public void TurnOn();

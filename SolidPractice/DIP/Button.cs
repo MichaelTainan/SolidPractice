@@ -1,7 +1,7 @@
 ﻿namespace SolidPractice.DIP;
 
 /// <summary>
-/// The Button must depends on Interface(ButtonServer), can't depend on Object(Lamp)
+/// The Button must depends on Interface(SwitchableDevice), not depend on Object(Lamp)
 /// </summary>
 public class Button
 {
@@ -10,10 +10,10 @@ public class Button
     //{
     //    lamp = new Lamp();
     //}
-    private ButtonServer buttonServer;
-    public Button(ButtonServer buttonServer)
+    private SwitchableDevice switchableDevice;
+    public Button(SwitchableDevice switchableDevice)
     {
-        this.buttonServer = buttonServer;
+        this.switchableDevice = switchableDevice;
     }
 
     //public bool CheckLampResult()
@@ -23,14 +23,14 @@ public class Button
 
     public void Poll()
     {
-        if (buttonServer.status() == false)
-            buttonServer.TurnOn();
+        if (switchableDevice.status() == false)
+            switchableDevice.TurnOn();
         else
-            buttonServer.TurnOff();
+            switchableDevice.TurnOff();
     }
 
-    public bool ButtonServerStatus()
+    public bool SwitchableDevice()
     {
-        return buttonServer.status();
+        return switchableDevice.status();
     }
 }

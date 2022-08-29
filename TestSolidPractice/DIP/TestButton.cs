@@ -6,8 +6,8 @@ namespace TestSolidPractice.DIP;
 [TestFixture]
 public class TestButton
 {
-    private ButtonServer lamp;
-    private ButtonServer motor;
+    private SwitchableDevice lamp;
+    private SwitchableDevice motor;
     private Button button;
     public TestButton()
     {
@@ -38,7 +38,7 @@ public class TestButton
         button.Poll();
         button.Poll();
         //Assert.AreEqual(true, button.CheckLampResult());  //depend on lamp, DIP violation.
-        Assert.AreEqual(false, button.ButtonServerStatus());
+        Assert.AreEqual(false, button.SwitchableDevice());
 
     }
 
@@ -49,7 +49,7 @@ public class TestButton
         button = new Button(motor);
         button.Poll();
         button.Poll();
-        Assert.AreEqual(false, button.ButtonServerStatus());
+        Assert.AreEqual(false, button.SwitchableDevice());
 
     }
 }

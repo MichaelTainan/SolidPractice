@@ -1,6 +1,6 @@
 ﻿namespace SolidPractice.DIP;
 
-public class Motor : ButtonServer
+public class Motor : SwitchableDevice
 {
     private bool power;
     public Motor()

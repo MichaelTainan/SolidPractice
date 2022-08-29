@@ -1,7 +1,7 @@
 ﻿using System;
 namespace SolidPractice.DIP;
 
-public class Lamp: ButtonServer
+public class Lamp: SwitchableDevice
 {
     private bool light;
     public Lamp()
