@@ -1,6 +1,9 @@
-﻿namespace TestSolidPractice.DIP
+﻿namespace SolidPractice.DIP
 {
-    internal class Regulate
+
+    public class Regulate
     {
     }
+
+
 }
