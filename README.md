@@ -11,6 +11,10 @@ There are some sample codes in five folder categories
 	  can doesn’t need to modify.
   2.2 Test arraylist to sort shapes, but we don't want to modify shape and orther class, so use new Shapecomparer class inherit IComparer, just modify TestClass
   to used, Shape/Circle/Squire class don't need to modified.
+3. LSP
+  Subtypes must replace their base types without causing wrong behavior.
+  Line and LineSegment check function IsOn() results can sometimes be different. (0,Y) is not on the line if lineSegment does not cross the Y axis, but (0, Y) is on the line if Line's Slop is not equal to null.
+      So if LineSegment inherits from Line, it is an LSP violation. The solution is to create a class LineObjec and pick up the common parts. Then both Line and LineSegment inherit it. 
 4. DIP
    From High Layer objects depend on Low Layer objects reverse become low layer objects depend on high layer, and depend on high layer interface.
   4.1 Button turn on/off lamp. use Button layer define interface SwitchableDevice, then create Lamp class depend on SwitchableDevice. Button class just implement SwitchableDevice. 

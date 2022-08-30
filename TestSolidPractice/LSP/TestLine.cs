@@ -7,10 +7,10 @@ namespace TestSolidPractice.LSP;
 [TestFixture]
 public class TestLine
 {
-    private Line line;
+    private LineObject line;
     private Point p1;
     private Point p2;
-    private LineSegment lineSegment;
+    private LineObject lineSegment;
     public TestLine()
     {
     }
@@ -46,7 +46,6 @@ public class TestLine
         //Assert.IsNull(line.YIntercept);
         Assert.AreEqual(0, lineSegment.Slope);
         Assert.AreEqual(1, lineSegment.YIntercept);
-        Assert.AreEqual((decimal)1, (decimal)Math.Round(lineSegment.Length,2));
         Assert.IsFalse(lineSegment.IsOn(new(0, (int)lineSegment.YIntercept)));
     }
 
@@ -59,6 +58,6 @@ public class TestLine
     /// <returns></returns>
     public void TestLineAndLineSegmentIsOnFuction()
     {
-        Assert.AreEqual(line.IsOn(new(0, (int)line.YIntercept)),lineSegment.IsOn(new(0, (int)lineSegment.YIntercept)));
+        Assert.AreNotEqual(line.IsOn(new(0, (int)line.YIntercept)),lineSegment.IsOn(new(0, (int)lineSegment.YIntercept)));
     }
 }
