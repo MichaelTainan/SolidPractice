@@ -15,7 +15,7 @@ public class TestTimedDoorByAdapter
     [Test]
     public void TestIsDoorOpen()
     {
-        timedDoor = new TimedDoor();
+        timedDoor = new TimedDoorByAdapter();
         timedDoor.Unlock();
         Assert.IsTrue(timedDoor.IsDoorOpen());
     }
@@ -23,7 +23,7 @@ public class TestTimedDoorByAdapter
     [Test]
     public void TestAlert()
     {
-        timedDoor = new TimedDoor();
+        timedDoor = new TimedDoorByAdapter();
         timer = new SolidPractice.ISP.Timer();
         timedDoor.Unlock();
         timer.Register(15, timedDoor);
