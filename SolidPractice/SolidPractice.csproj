@@ -11,11 +11,13 @@
     <None Remove="OCP\" />
     <None Remove="LSP\" />
     <None Remove="DIP\" />
+    <None Remove="ISP\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="SRP\" />
     <Folder Include="OCP\" />
     <Folder Include="LSP\" />
     <Folder Include="DIP\" />
+    <Folder Include="ISP\" />
   </ItemGroup>
 </Project>

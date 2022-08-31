@@ -3,8 +3,8 @@ namespace SolidPractice.DIP;
 
 public interface Heater
 {
-    public void Disengage();
-    public void Engage();
-    public bool GetHeating();
+    void Disengage();
+    void Engage();
+    bool GetHeating();
 }
 

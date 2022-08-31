@@ -3,6 +3,6 @@ namespace SolidPractice.DIP;
 
 public interface Thermometer
 {
-    public double Read();
-    public void Write(double temp);
+    double Read();
+    void Write(double temp);
 }
