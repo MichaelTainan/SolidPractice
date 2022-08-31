@@ -7,6 +7,7 @@ namespace TestSolidPractice.ISP;
 public class TestTimedDoorByAdapter
 {
     private Door timedDoor;
+    private TimerClient doorTimerAdapter;
     private SolidPractice.ISP.Timer timer;
     public TestTimedDoorByAdapter()
     {
@@ -15,7 +16,7 @@ public class TestTimedDoorByAdapter
     [Test]
     public void TestIsDoorOpen()
     {
-        timedDoor = new TimedDoorByAdapter();
+        timedDoor = new TimedDoorAdaptee();
         timedDoor.Unlock();
         Assert.IsTrue(timedDoor.IsDoorOpen());
     }
@@ -23,10 +24,11 @@ public class TestTimedDoorByAdapter
     [Test]
     public void TestAlert()
     {
-        timedDoor = new TimedDoorByAdapter();
+        timedDoor = new TimedDoorAdaptee();
+        doorTimerAdapter = new DoorTimerAdapter(timedDoor);
         timer = new SolidPractice.ISP.Timer();
         timedDoor.Unlock();
-        timer.Register(15, timedDoor);
+        timer.Register(15, doorTimerAdapter);
         Assert.IsTrue(timedDoor.IsAlert());
     }
 }
