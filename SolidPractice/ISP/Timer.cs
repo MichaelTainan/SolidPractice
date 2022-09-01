@@ -1,17 +1,24 @@
 ﻿using System;
+using System.Collections;
+
 namespace SolidPractice.ISP;
 
 public class Timer
 {
-    public Timer()
-    {
-    }
+    private TimerClient myClient;
+    private int myTimeout;
 
     public void Register(int timeout, TimerClient client)
     {
-        if (timeout > 10)
+        myClient = client;
+        myTimeout = timeout;
+    }
+
+    public void Check(int timeRange)
+    {
+        if (timeRange > myTimeout)
         {
-            client.TimeOut();
+            myClient.TimeOut();
         }
     }
 }

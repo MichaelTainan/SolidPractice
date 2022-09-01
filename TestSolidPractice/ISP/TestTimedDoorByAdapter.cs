@@ -28,8 +28,9 @@ public class TestTimedDoorByAdapter
         doorTimerAdapter = new DoorTimerAdapter(timedDoor);
         timer = new SolidPractice.ISP.Timer();
         timedDoor.Unlock();
-        timer.Register(15, doorTimerAdapter);
-        Assert.IsTrue(timedDoor.IsAlert());
+        timer.Register(10, doorTimerAdapter);
+        timer.Check(15);
+        Assert.IsTrue(doorTimerAdapter.IsAlert());
     }
 }
 

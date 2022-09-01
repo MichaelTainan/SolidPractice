@@ -2,6 +2,6 @@
 
 public interface TimerClient
 {
-    void TimeOut();
     bool IsAlert();
+    void TimeOut();
 }

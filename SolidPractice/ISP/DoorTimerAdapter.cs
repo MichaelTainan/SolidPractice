@@ -5,7 +5,7 @@ namespace SolidPractice.ISP;
 public class DoorTimerAdapter : TimerClient
 {
     private Door timedDoor;
-
+    private bool isAlert;
     public DoorTimerAdapter(Door theDoor)
     {
         timedDoor = theDoor;
@@ -18,6 +18,6 @@ public class DoorTimerAdapter : TimerClient
 
     public void TimeOut()
     {
-        timedDoor.DoorTimeOut(timeOutId);
+        isAlert = true;
     }
 }

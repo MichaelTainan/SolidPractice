@@ -4,7 +4,6 @@ namespace SolidPractice.ISP;
 public class TimedDoorAdaptee : Door
 {
     private bool isDoorOpen;
-    private bool isAlert;
 
     public TimedDoorAdaptee()
     {
@@ -18,7 +17,7 @@ public class TimedDoorAdaptee : Door
     public void Lock()
     {
         isDoorOpen = false;
-        isAlert = false;
+        //isAlert = false;
     }
 
     public bool IsDoorOpen()
@@ -26,9 +25,9 @@ public class TimedDoorAdaptee : Door
         return isDoorOpen;
     }
 
-    internal void DoorTimeOut(int timeOutId)
-    {
-        throw new NotImplementedException();
-    }
+    //internal void DoorTimeOut(int timeOutId)
+    //{
+    //    throw new NotImplementedException();
+    //}
 }
 

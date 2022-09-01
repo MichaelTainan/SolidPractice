@@ -26,7 +26,8 @@ public class TestTimedDoor
         timedDoor = new TimedDoor();
         timer = new SolidPractice.ISP.Timer();
         timedDoor.Unlock();
-        timer.Register(15, timedDoor);
+        timer.Register(10, timedDoor);
+        timer.Check(15);
         Assert.IsTrue(timedDoor.IsAlert());
     }
 }
