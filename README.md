@@ -1,5 +1,5 @@
 # SOLID Practice
-This project is to practice SOLID concepts. reference from the book:Agile Principles, Patterns, and Practices in C#
+This project is to practice SOLID concepts by use TDD to develop. reference from the book:Agile Principles, Patterns, and Practices in C#
 
 There are some sample codes in five folder categories
 1. SRP
